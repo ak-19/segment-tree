@@ -1,0 +1,17 @@
+{
+  "name": "segment-tree-case-study",
+  "version": "1.0.0",
+  "description": "segment tree use cases",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "keywords": [],
+  "author": "ante",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.16.4",
+    "jest": "^24.1.0"
+  },
+  "dependencies": {
+  }
+}
