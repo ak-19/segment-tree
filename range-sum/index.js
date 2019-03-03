@@ -9,12 +9,17 @@ class RangeSum {
     this.sums = sums;
   }
 
+  
+
   getRange(start = 0, end = this.numbers.length) {
     end = Math.min(end, this.numbers.length);
     return this.sums[end] - this.sums[start];
   }
 
   changeWithAt(newValue, index) {
+    if (index < 0 || index >= this.numbers.length) {
+      throw new Error('Index is out of existing range');
+    }
     this.numbers[index] = newValue;
     for (let i = index; i < this.numbers.length; i++) {
         this.sums[i + 1] = this.sums[i] + this.numbers[i];

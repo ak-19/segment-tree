@@ -46,11 +46,23 @@ describe('Given test array [1,2,3,4]', () => {
         });
     });
 
-    describe('When item at index 2 is changed to 11, and params are start = 1 only', () => {
+    describe('When item at index 2 is changed to 11, and get range params is only start = 1', () => {
         test('should return 17', () => {
             const rSum = new RangeSum([1,2,3,4]);
             rSum.changeWithAt(11, 2);
             expect(rSum.getRange(1)).toBe(17);
+        });
+    });
+
+
+    describe('When change is made on element outisde the existing range', () => {
+        test(`should throw and error with message 'Index is out of existing range'`, () => {
+            const rSum = new RangeSum([1,2,3,4]);
+            try {
+                rSum.changeWithAt(1, 12);
+            } catch (error) {
+                expect(error.message).toBe('Index is out of existing range');
+            }
         });
     });
 });

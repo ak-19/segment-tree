@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "segment tree use cases",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --watch --coverage"
   },
   "keywords": [],
   "author": "ante",
@@ -12,6 +12,13 @@
     "prettier": "^1.16.4",
     "jest": "^24.1.0"
   },
-  "dependencies": {
+  "dependencies": {},
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js}",
+      "**/range-sum/**",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ]
   }
 }
