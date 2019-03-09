@@ -2,17 +2,18 @@ const RangeSum = require('./index');
 
 describe('Given test array [1,2,3,4]', () => {
     describe('When input params are 1 and 3', () => {
-        test('should return 5', () => {
+        test('should return 9', () => {
             const testArray = [1,2,3,4];
             const rSum = new RangeSum(testArray);
-            expect(rSum.getRange(1,3)).toBe(5);
+            const result = rSum.getRange(1,3);
+            expect(result).toBe(9);
         });
     });
     describe('When input params are 2 and 3', () => {
-        test('should return 3', () => {
+        test('should return 7', () => {
             const testArray = [1,2,3,4];
             const rSum = new RangeSum(testArray);
-            expect(rSum.getRange(2,3)).toBe(3);
+            expect(rSum.getRange(2,3)).toBe(7);
         });
     });
     describe('When input params are 0 and 4', () => {
